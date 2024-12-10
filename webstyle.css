@@ -1,0 +1,380 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* Background styles for specific pages */
+.index-page, .about-page, .attractions-page, .contact-page, .gallery-page {
+  background-color: #f9f9f92f;
+  background-image: url('images/binakolweave.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation styles */
+nav {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+nav.scrolled {
+  background-color: rgba(26, 95, 122, 1);
+}
+nav .container {
+  font-family: system-ui;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Additional CSS rules remain the same */
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: Segoe UI;
+  font-size: 30px; /* Adjust font size as needed */
+  font-weight: 700; /* Make text bold, if desired */
+  text-decoration: none; /* Remove underline from link */
+  color: #ffffff; /* Adjust text color as needed */
+  text-shadow: 
+    -1px -1px 0 #000,   /* Top left shadow */
+    1px -1px 0 #000,    /* Top right shadow */
+    -1px 1px 0 #000,    /* Bottom left shadow */
+    1px 1px 0 #000;    /* Bottom right shadow */
+}
+
+.logo-image {
+  width: 60px; /* Adjust the logo size */
+  height: auto; /* Keeps aspect ratio */
+  margin-right: 8px; /* Adds space between logo and text */
+}
+
+.nav-links {
+  display: none;
+}
+.nav-links.active {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 250;
+  right: 0;
+  background-color: rgba(26, 95, 122, 0.548);
+  padding: 2px 0;
+  border-radius: 0 0 10px 10px;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Hero section styles */
+
+/*.index-page {
+  background-color: #f9f9f900;
+  background-image: url('images/sarratindex.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}*/
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 80vh; /* Set a minimum height for better visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero-image {
+  width: 100%; /* Adjust width as needed */
+  max-width: 400px;/* Limits the max width of the image */
+  height: auto; /* Keeps the image aspect ratio */
+  margin-bottom: 20px; /* Adds space below the image */
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 5rem;
+  border-radius: 10px;
+}
+.hero h1 {
+  color: #ff5252;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.outlined-text {
+  text-align: center;
+  font-size: 72px;          /* Adjust the font size */
+  font-weight: bold;        /* Optional: Makes the text bolder */
+  color: white;             /* Text color */
+  text-shadow: 
+    2px 2px 0px rgba(0, 0, 0, 0.7),   /* Shadow to the right and down */
+   -2px -2px 0px rgba(0, 0, 0, 0.7),   /* Shadow to the left and up */
+    2px -2px 0px rgba(0, 0, 0, 0.7),   /* Shadow to the left and up */
+   -2px 2px 0px rgba(0, 0, 0, 0.7);    /* Shadow to the right and down */
+}
+.cta-button {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #ff5252;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* Section styles */
+section {
+  padding: 6rem 0;
+}
+h2 {
+  text-align: center;
+  margin-bottom: auto;
+  color: #1a5f7a;
+  font-size: 2.5px;
+}
+button {
+  background-color: rgba(26, 95, 122, 0.8); /* Semi-transparent button */
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: rgba(21, 73, 94, 0.8); /* Slightly darker on hover */
+}
+/* About section styles */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.836);  /* Transparent background */
+}
+.about-text {
+  background-color: rgba(255, 255, 255, 0.548);
+  border-radius: 10px;
+  flex: 1;
+  min-width: 300px;
+}
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact form styles */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Attractions styles */
+.attractions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 5rem 0;
+}
+
+.attraction {
+ background-color: rgba(255, 255, 255, 0.678); /* Transparent background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.attraction:hover {
+  transform: translateY(-5px);
+}
+.attraction img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.attraction-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  align-items: center;
+}
+.attraction h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #1a5f7a;
+  align-items: center;
+}
+
+ /* Footer styles */
+ footer {
+  background-color: rgba(26, 95, 122, 0.8);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff6b6b;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(26, 95, 122, 0.425);
+    padding: 1rem 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .about-content, .contact-container {
+    flex-direction: column;
+  }
+.content {
+flex-grow: 1;
+}
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

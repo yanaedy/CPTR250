@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sarrat, Ilocos Norte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="webstyle.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/sarratlogo.png" alt="Logo" class="logo-image">
+                Sarrat
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>
+  
+<body class="about-page">
+    <!-- Main Content -->
+    <main>
+      <section id="about" style="text-align: center;">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <h2 div class="outlined-text">Get to Know, Sarrat.</h2>
+                        <div class="about-image" style="text-align: center;">
+                <img src="images/sarratarc.jpg" alt="Sarrat landscape" style="max-width: 100%; height: auto;">
+            </div>
+                <div class="about-text" style="text-align: center;">
+                    <p>Cabayugan was how the people called Sarrat by its first settlers led by the village chief Minagel(Maingel) Bang'at and his wife Sarrah, before the arrival of the Spaniards on the latter part of the 16th century. Sarrat is the compound of the couples name and it is believed to be coined by their son Garo.</p><br>
+                      <p>Cabuyan or Sarrat was established in 1586 as an Augustianian visita of Laoag. It became an independent Parish in 1724. Sarrat was annexed to San Nicolas on May 7,1740. During the revolt of 1815, many houses were burned to the ground and the town was left in shambles. After the revolt, the poblacion was transferred to its present site. Upon the partition of Ilocos province in 1818, Sarrat was designated as the capital of Ilocos Norte until its transfer to Laoag within the year. </p><br>
+                      <p>It boast of a colourful and violent history: the whole town joined the Basi Revolt of 1807; rose up in arms again in 1815 during Sarrat Rebellion of which the hated housekeeper of the parish priest, Rosa Agcaoili, was killed and desmembered;and the revolted against the Americans in 1899 under the leadership of Don Pepe Ver. In 1910, the court returned Sarrat's church and convent to the Catholics and a day later, the Aglipayan Parish priest, Fr. Mariano Edralin, was found murdered. The beautiful church of Sta. Monica was started to be built by Fr. Isidro Champaner(OSA) in 1848. It is probably the biggest Spanish-era church in Ilocos Norte. Its original roof truss of logs is still intact.</p><br>
+                      
+                      <p>After the colonization of the Spaniards, the town was renamed to San Miguel when the Augustinians erected a parish coinciding with the gaining of its township status on September 29,1724. Two former senators, Santiago Fonacied and Isabelo delos Reyes, eventually created the bill as Republic Act No 2390 that changed the town's name from San Miguel to Sarrat in February 28,1914.
+                        Sarrat's former names were Cabuyan meaning place where bayug (a kind of bamboo) grows,San Miguel de Cunning(meaning"saffron"which used to be harvested abundantly in the region) and San Miguel de Sarrat. Its name was changed from San Miguel to Sarrat in 1914.</p><br>
+                      <p>The Sarrat Heroes monument erected at the town plaza symbolizes the heroism and bravery of all Sarratenos. "Ritritemon Kayong" was their war cry that still echoes on the true blooded Sarratenos.</p><br>
+      
+                    <p>Experience the charm of our town, from the historic Sta. Monica Church to the serene Padsan River. Immerse yourself in the rich culture and warm hospitality of the locals as you explore the wonders of Sarrat.</p>
+                </div>
+            </div>
+        </div>
+      </section>
+    </body>
+
+  <!-- Footer -->
+  <footer>
+      <div class="container">
+          <div class="footer-content">
+              <p>&copy; 2023 Sarrat Tourism. All rights reserved.</p>
+              <div class="footer-links">
+                  <a href="index.html">Home</a>
+                  <a href="attractions.html">Attractions</a>
+                  <a href="gallery.html">Gallery</a>
+                  <a href="contact.html">Contact Us</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script>
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+
+      // Change navbar background on scroll
+      window.addEventListener('scroll', () => {
+          const nav = document.querySelector('nav');
+          if (window.scrollY > 50) {
+              nav.classList.add('scrolled');
+          } else {
+              nav.classList.remove('scrolled');
+          }
+      });
+
+      // Simple form submission (you'll need to implement server-side handling)
+      const contactForm = document.getElementById('contact-form');
+      contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Thank you for your message! We will get back to you soon.');
+          contactForm.reset();
+      });
+  </script>
+</body>
+</html>

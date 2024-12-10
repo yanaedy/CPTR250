@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="webstyle.css">
+</head>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/sarratlogo.png" alt="Logo" class="logo-image">
+                Sarrat
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>
+  
+
+<body class="contact-page">
+    <main>
+          <!-- Contact Section -->
+              <section id="contact">
+                <div class="container">
+                    <h2 div class="outlined-text">Contact Us</h2>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <h3>Get in Touch</h3>
+                            <p>Have questions or want to plan your visit? Reach out to us!</p>
+                            <p>Email: info@sarrat.gov.ph</p>
+                            <p>Phone: +63 123 456 7890</p>
+                            <p>Address: Sarrat, Ilocos Norte, Philippines</p>
+                        </div>
+                        <div class="contact-form">
+                            <form id="contact-form">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
+                                <button type="submit">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2024 Sarrat Tourism. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="index.html">About</a>
+                        <a href="attractions.html">Attractions</a>
+                        <a href="gallery.html">Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <script>
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links'); 
+    
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+    
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    
+            // Change navbar background on scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+    
+            // Simple form submission (you'll need to implement server-side handling)
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        </script>
+    </body>
+    </html>

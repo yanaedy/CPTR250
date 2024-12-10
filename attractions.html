@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions in Sarrat, Ilocos Norte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="webstyle.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/sarratlogo.png" alt="Logo" class="logo-image">
+                Sarrat
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>
+  
+
+<body class="attractions-page">
+       <!-- Attractions Section -->
+        <section id="attractions">
+          <div class="container">
+                     <h2 div class="outlined-text">Key Attractions</h2>
+            <div class="attractions">
+                  <div class="attraction">
+                      <img src="images/sarratchurch.jpg" alt="Sta. Monica Church">
+                      <div class="attraction-content">
+                          <h3>Sta. Monica Church</h3>
+                          <p>Sta. Monica Church, located in Sarrat, Ilocos Norte, is a historical Catholic church renowned for its impressive architecture and rich cultural significance. Built in the 18th century during the Spanish colonial era, the church is dedicated to St. Monica, the mother of St. Augustine. It is known for its beautiful baroque style, featuring intricate stone carvings, a spacious interior, and a majestic altar. The church is also famous for its role in the Philippine Revolution, as it served as a site for significant events in the country's struggle for independence. Its historical importance and striking design make Sta. Monica Church a significant landmark in the Ilocos Norte region.</p>
+                      </div>
+                  </div>
+                     
+                       <div class="attraction">
+                        <img src="images/tupig.jpg" href="" alt="delicacy">
+                        <div class="attraction-content">
+                            <h3>Tupig</h3>
+                            <p>A traditional Filipino delicacy that showcases the rich culinary heritage of the region. Made from glutinous rice, coconut milk, sugar, and sometimes toasted sesame seeds, Tupig is wrapped in banana leaves and then grilled over charcoal for a smoky, caramelized flavor. The perfect blend of chewy, sweet, and savory, Tupig is often enjoyed as a snack or dessert, and is a favorite during local festivals and gatherings. Sarrat, Ilocos Norte, is renowned for producing some of the finest Tupig, which is known for its rich taste and unique texture.</p>
+                        </div>
+                  </div>
+                  <div class="attraction">
+                    <img src="images/sarratmuseum.jpg" alt="Marcos Birthplace">
+                    <div class="attraction-content">
+                        <h3>Sarrat Museum</h3>
+                        <p>The Sarrat Museum, located in Sarrat, Ilocos Norte, is a historical museum dedicated to preserving the rich cultural and heritage of the town and the Ilocos region. Housed in a former convent, the museum showcases a variety of artifacts, including religious relics, historical documents, and photographs, offering visitors a glimpse into the area's colonial past and local traditions. Highlights include exhibits on the Ilocos Norte's role in the Philippine Revolution, the Spanish period, and the influence of Catholicism in the region. It is a must-visit for those interested in the history and cultural legacy of Northern Luzon.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </body>
+
+    <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2024 Sarrat Tourism. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="attractions.html">Attractions</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+    
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+    
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    
+            // Change navbar background on scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+    
+            // Simple form submission (you'll need to implement server-side handling)
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        </script>
+    </body>
+    </html>

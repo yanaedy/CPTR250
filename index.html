@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sarrat, Ilocos Norte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="webstyle.css">
+</head>
+
+<nav>
+    <div class="container">
+       <a href="#" class="logo">
+            <img src="images/sarratindexlogo.png" alt="Logo" class="logo-image">      
+                 
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </div>
+</nav>
+  
+<body class="index-page">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <a href="about.html">
+            <img src="images/sarratlogo.png" alt="Sarrat Landscape" class="hero-image"><!-- Add your image here --></a>
+            <div class="button-container">
+            <a href="about.html" class="cta-button">Explore Now</a>
+        </div>
+        </div>
+    </header>
+</body>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Sarrat Tourism. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="attractions.html">Attractions</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Change navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Simple form submission (you'll need to implement server-side handling)
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
